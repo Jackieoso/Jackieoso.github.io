@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Map</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/twentytwenty.css" rel="stylesheet">
+  
+</head>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><b>Concert Tickets</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="artists.html">Artists</a></li>
+        <li class="nav-item"><a class="nav-link active" href="map.html">Map</a></li>
+        <li class="nav-item"><a class="nav-link" href="merch.html">Merch</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Cities</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Las Vegas</a></li>
+            <li><a class="dropdown-item" href="#">Phoenix</a></li>
+            <li><a class="dropdown-item" href="#">New York</a></li>
+            <li><a class="dropdown-item" href="#">Miami</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">All Cities</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div> <!-- close navbar collapse -->
+  </div> <!-- close container-fluid -->
+</nav> <!-- close nav -->
+
+
+<body>
+
+<!-- Venue Map -->
+<section class="venue-map text-center mt-5">
+  <h2>📍 Find Your Way to the Show</h2>
+  <p class="venue-address">Madison Square Garden - New York, NY 10001</p>
+  
+  <form class="map-search d-flex justify-content-center gap-2" onsubmit="updateMap(event)">
+    <input type="text" id="searchInput" placeholder="Search for another location..." class="form-control w-50" required>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.6056072472916!2d-73.9934387!3d40.750504500000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a21fb011c85%3A0x33df10e49762f8e4!2sMadison%20Square%20Garden!5e1!3m2!1sen!2sus!4v1745707759235!5m2!1sen!2sus"
+    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<!-- TwentyTwenty Comparison Section -->
+<section class="comparison-section text-center mt-5 mb-5">
+  <h2 class="comparison-title mb-4">STAGE BEFORE & AFTER🎤</h2>
+  <div class="container">
+    <div class="twentytwenty-container">
+      <img src="images/Untitled design/2.png" alt="Stage Before" />
+      <img src="images/Untitled design/1.png" alt="Stage After" />
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<div class="container-fluid footer">
+   <div id="container-2">
+
+    <footer>
+    <hr>
+    <div id="footerleft">
+        <h5> Copyright © 2025 Concert Tickets, Inc. All right reserved.</h5>
+    
+    </div><!-- closing footerleft -->
+    
+    
+    <div id="footerright">
+        <ul>
+            <img src="images/footer/fb.png" alt="Facebook">
+            <img src="images/footer/yt.png" alt="YouTube">
+            <img src="images/footer/ig.png" alt="Instagram">
+        </ul>
+    </div><!-- closing footerright -->
+    
+    </footer>
+
+    </div><!-- closing container-2 div -->
+
+
+</div><!-- close container fluid -->
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Initialize TwentyTwenty -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+<script src="js/jquery.event.move.js"></script>
+<script src="js/jquery.twentytwenty.js"></script>
+
+<script>
+$(window).on('load', function() {
+  $(".twentytwenty-container").twentytwenty();
+});
+</script>
+
+<script>
+    $(function(){
+      $("#twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
+      $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
+    });
+    </script>
+
+</body>
+</html>

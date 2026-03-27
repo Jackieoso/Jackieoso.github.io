@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artist</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
+  
+  <link href="css/twentytwenty.css" rel="stylesheet">
+
+
+</head>
+  
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><b>Concert Tickets</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link active" href="artists.html">Artists</a></li>
+        <li class="nav-item"><a class="nav-link" href="map.html">Map</a></li>
+        <li class="nav-item"><a class="nav-link" href="merch.html">Merch</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Cities</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Las Vegas</a></li>
+            <li><a class="dropdown-item" href="#">Phoenix</a></li>
+            <li><a class="dropdown-item" href="#">New York</a></li>
+            <li><a class="dropdown-item" href="#">Miami</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">All Cities</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div> <!-- close navbar collapse -->
+  </div> <!-- close container-fluid -->
+</nav> <!-- close nav -->
+
+<body>
+
+
+<!-- Spotify embed -->
+ <h1>🎶 Stream the Hits Before You See Them Live 🎶</h1>
+
+  <form class="spotify-search" action="https://open.spotify.com/search" method="get" target="_blank">
+    <input type="text" name="query" placeholder="Search for a song, album, or artist..." required>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+
+  <iframe 
+    src="https://open.spotify.com/embed/artist/6FBDaR13swtiWwGhX1WQsP?utm_source=generator" 
+    frameborder="0" 
+    allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy">
+  </iframe>
+  
+  <!-- Footer -->
+  <div class="container-fluid footer">
+   <div id="container-2">
+
+    <footer>
+    <hr>
+    <div id="footerleft">
+        <h5> Copyright © 2025 Concert Tickets, Inc. All right reserved.</h5>
+    
+    </div><!-- closing footerleft -->
+    
+    
+    <div id="footerright">
+        <ul>
+            <img src="images/footer/fb.png" alt="Facebook">
+            <img src="images/footer/yt.png" alt="YouTube">
+            <img src="images/footer/ig.png" alt="Instagram">
+        </ul>
+    </div><!-- closing footerright -->
+    
+    </footer>
+
+    </div><!-- closing container-2 div -->
+
+
+</div><!-- close container fluid -->
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
